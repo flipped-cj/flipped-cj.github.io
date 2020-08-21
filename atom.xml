@@ -6,7 +6,7 @@
   <link href="https://jxnuay.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://jxnuay.gitee.io/"/>
-  <updated>2020-08-21T00:26:52.356Z</updated>
+  <updated>2020-08-21T02:11:56.491Z</updated>
   <id>https://jxnuay.gitee.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试html-iframe</title>
+    <link href="https://jxnuay.gitee.io/posts/d10485b7.html"/>
+    <id>https://jxnuay.gitee.io/posts/d10485b7.html</id>
+    <published>2020-08-21T02:04:47.000Z</published>
+    <updated>2020-08-21T02:11:56.491Z</updated>
+    
+    <content type="html"><![CDATA[<iframe src="https://video.bianfu.site/video/?url=https://cdn.jsdelivr.net/gh/flipped-cj/ImageHosting/video/playlist.m3u8" width="100%" height="530px" frameborder="0" allowfullscreen="allowfullscreen"></iframe>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;iframe src=&quot;https://video.bianfu.site/video/?url=https://cdn.jsdelivr.net/gh/flipped-cj/ImageHosting/video/playlist.m3u8&quot; width=&quot;100%&quot; heig</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="https://jxnuay.gitee.io/tags/test/"/>
+    
+  </entry>
   
   <entry>
     <title>test</title>
