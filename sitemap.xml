@@ -53,29 +53,29 @@
 
   <url>
     <loc>https://jxnuay.gitee.io/</loc>
-    <lastmod>2020-08-25</lastmod>
+    <lastmod>2020-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://jxnuay.gitee.io/tags/test/</loc>
-    <lastmod>2020-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jxnuay.gitee.io/tags/koa2/</loc>
-    <lastmod>2020-08-25</lastmod>
+    <lastmod>2020-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://jxnuay.gitee.io/tags/koa-multer/</loc>
-    <lastmod>2020-08-25</lastmod>
+    <lastmod>2020-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jxnuay.gitee.io/tags/test/</loc>
+    <lastmod>2020-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://jxnuay.gitee.io/categories/Node/</loc>
-    <lastmod>2020-08-25</lastmod>
+    <lastmod>2020-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
