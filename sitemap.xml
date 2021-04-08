@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.flechazo.site/posts/f1302dbb.html</loc>
+    
+    <lastmod>2021-04-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.flechazo.site/posts/696a7195.html</loc>
     
     <lastmod>2021-04-08</lastmod>
@@ -44,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://blog.flechazo.site/posts/f1302dbb.html</loc>
-    
-    <lastmod>2020-08-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.flechazo.site/categories/index.html</loc>
     
     <lastmod>2020-08-20</lastmod>
@@ -81,21 +81,21 @@
 
   
   <url>
-    <loc>https://blog.flechazo.site/tags/koa/</loc>
-    <lastmod>2021-04-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.flechazo.site/tags/Mysql/</loc>
-    <lastmod>2021-04-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.flechazo.site/tags/koa2/</loc>
+    <lastmod>2021-04-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.flechazo.site/tags/koa-multer/</loc>
+    <lastmod>2021-04-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.flechazo.site/tags/koa/</loc>
     <lastmod>2021-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -116,7 +116,7 @@
   </url>
   
   <url>
-    <loc>https://blog.flechazo.site/tags/koa-multer/</loc>
+    <loc>https://blog.flechazo.site/tags/Mysql/</loc>
     <lastmod>2021-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
