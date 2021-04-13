@@ -6,7 +6,7 @@
   <link href="https://blog.flechazo.site/atom.xml" rel="self"/>
   
   <link href="https://blog.flechazo.site/"/>
-  <updated>2021-04-08T10:13:00.532Z</updated>
+  <updated>2021-04-13T08:06:13.694Z</updated>
   <id>https://blog.flechazo.site/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue项目打包优化</title>
+    <link href="https://blog.flechazo.site/posts/65b3dd5.html"/>
+    <id>https://blog.flechazo.site/posts/65b3dd5.html</id>
+    <published>2021-04-13T07:36:30.000Z</published>
+    <updated>2021-04-13T08:06:13.694Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-使用-webpack-插件-compression-webpack-plugin"><a href="#1-使用-webpack-插件-compression-webpack-plugin" class="headerlink" title="1.使用 webpack 插件 compression-webpack-plugin"></a>1.使用 webpack 插件 compression-webpack-plugin</h2><p>安装5.0.2版本，目前7.1.2 vue打包会报错，文档地址 &lt;<a href="https://www.npmjs.com/package/compression-webpack-plugin">compression-webpack-plugin - npm (npmjs.com)</a>&gt;</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i compression-webpack-plugin@5.0.2 -D</span><br></pre></td></tr></table></figure><p>新建 <code>vue.config.js</code> 文件，重写 <code>webpcak</code> 配置</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> CompressionPlugin = <span class="built_in">require</span>(<span class="string">&#x27;compression-webpack-plugin&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> productionGzipExtensions = <span class="regexp">/\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  publicPath: <span class="string">&#x27;./&#x27;</span>,</span><br><span class="line">  productionSourceMap: <span class="literal">false</span>,</span><br><span class="line">  configureWebpack: &#123;</span><br><span class="line">    plugins: [</span><br><span class="line">      <span class="keyword">new</span> CompressionPlugin(&#123;</span><br><span class="line">        algorithm: <span class="string">&#x27;gzip&#x27;</span>,</span><br><span class="line">        test: productionGzipExtensions,</span><br><span class="line">        threshold: <span class="number">10240</span>,</span><br><span class="line">        minRatio: <span class="number">0.8</span>,</span><br><span class="line">        deleteOriginalAssets: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行 <code>npm run build</code> 后会生成 <code>.gz</code> 的文件，如果是 NGINX 需要配置服务器</p><h2 id="2-使用CDN"><a href="#2-使用CDN" class="headerlink" title="2.使用CDN"></a>2.使用CDN</h2><p>在配置webpack项的 <code>configureWebpack</code> 添加</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">externals: &#123;</span><br><span class="line">  vue: <span class="string">&#x27;Vue&#x27;</span>,</span><br><span class="line">  axios: <span class="string">&#x27;axios&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;element-ui&#x27;</span>: <span class="string">&#x27;ElementUI&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>打包时排除项目使用到的库</p><p>在 <code>/public/index.html</code> 中添加cdn链接</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/axios/axios/dist/axios.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/theme-chalk/index.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这两步过后打包体积一般都能小几倍</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="Vue" scheme="https://blog.flechazo.site/categories/Vue/"/>
+    
+    
+    <category term="vue" scheme="https://blog.flechazo.site/tags/vue/"/>
+    
+    <category term="webpack" scheme="https://blog.flechazo.site/tags/webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>koa2使用MongoDB</title>
