@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.flechazo.site/posts/10ccb7da.html</loc>
+    
+    <lastmod>2021-04-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.flechazo.site/posts/65b3dd5.html</loc>
     
     <lastmod>2021-04-13</lastmod>
@@ -81,64 +88,71 @@
 
   <url>
     <loc>https://blog.flechazo.site/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://blog.flechazo.site/tags/express/</loc>
+    <lastmod>2021-04-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.flechazo.site/tags/koa2/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.flechazo.site/tags/koa-multer/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.flechazo.site/tags/test/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.flechazo.site/tags/vue/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.flechazo.site/tags/webpack/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.flechazo.site/tags/koa/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.flechazo.site/tags/Redis/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.flechazo.site/tags/Mysql/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.flechazo.site/tags/test/</loc>
+    <lastmod>2021-04-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.flechazo.site/tags/Redis/</loc>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -147,14 +161,14 @@
   
   <url>
     <loc>https://blog.flechazo.site/categories/Node/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.flechazo.site/categories/Vue/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
